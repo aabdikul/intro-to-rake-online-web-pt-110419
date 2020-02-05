@@ -13,3 +13,15 @@ end
 desc 'makes sure console rake task exists'
 task :console do
 end
+
+namespace :db do
+  desc 'inovkes the environment as a dependency'
+  task :migrate => :environment do
+    Student.create_table
+  end
+
+  desc 'seeds  the database with dummy data'
+  task :seed
+   require_relative './db/seeds.rb'
+ end
+ end
