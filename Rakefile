@@ -18,6 +18,7 @@ namespace :db do
   desc 'require the environment file'
   task :environment do
     require_relative "./config/environment.rb"
+  end
 
   desc 'creates the table'
   task :migrate => :environment do
