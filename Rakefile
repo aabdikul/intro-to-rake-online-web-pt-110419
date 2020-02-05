@@ -9,3 +9,7 @@ end
     puts "hola de Rake!"
   end
 end
+
+desc 'makes sure console rake task exists'
+task :console do
+end
