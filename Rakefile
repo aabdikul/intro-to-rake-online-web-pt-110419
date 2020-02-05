@@ -15,12 +15,16 @@ task :console do
 end
 
 namespace :db do
-  desc 'invokes the environment as a dependency'
+  desc 'require the environment file'
+  task :environment do
+    require_relative "./config/environment.rb"
+
+  desc 'creates the table'
   task :migrate => :environment do
     Student.create_table
   end
 
-  desc 'seeds  the database with dummy data'
+  desc 'seeds the database with dummy data'
   task :seed
    require_relative './db/seeds.rb'
  end
