@@ -15,10 +15,10 @@ task :console do
 end
 
 namespace :db do
-  desc 'invokes the environment as a dependency'
-  task :migrate => :environment do
-    Student.create_table
-  end
+  #desc 'invokes the environment as a dependency'
+  #task :migrate => :environment do
+  #  Student.create_table
+  #end
 
   desc 'seeds  the database with dummy data'
   task :seed
